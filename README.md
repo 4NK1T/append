@@ -25,3 +25,10 @@ Add >> to the start and << to the end of each line:
 
     append -s ">> " -e " <<" example.txt -o result.txt
 
+## Pipe Example
+
+You can also use append with pipes. For example, adding /phpinfo.php to the end of each URL in a file:
+
+    cat urls.txt | append -e '/phpinfo.php'
+
+This will append **/phpinfo.php** to each line read from urls.txt.
